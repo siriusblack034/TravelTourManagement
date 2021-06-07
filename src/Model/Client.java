@@ -17,16 +17,18 @@ public class Client implements Serializable{
     private String phoneNumber;
     private String email;
     private String address;
+    private String typeID;
 
-    public Client(int id, String name, String phoneNumber, String email, String address) {
+    public Client() {
+    }
+
+    public Client(int id, String name, String phoneNumber, String email, String address, String typeID) {
         this.id = id;
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.address = address;
-    }
-
-    public Client() {
+        this.typeID = typeID;
     }
 
     public int getId() {
@@ -48,5 +50,10 @@ public class Client implements Serializable{
     public String getAddress() {
         return address;
     }
+
+    public String getTypeID() {
+        return typeID;
+    }
     
+   
 }

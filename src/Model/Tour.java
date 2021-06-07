@@ -14,28 +14,30 @@ import java.util.Date;
  */
 public class Tour implements Serializable{
     private int id ;
+    private String nameTour;
     private String whereStart;
     private String description;
+    private String arrival ;
     private Date dateStart;
-    private int idBooking ;
-    
-    public Tour(int id, String whereStart, String description, Date dateStart,int idBooking) {
-        this.id = id;
-        this.whereStart = whereStart;
-        this.description = description;
-        this.dateStart = dateStart;
-        this.idBooking = idBooking;
-    }
-
-    public int getIdBooking() {
-        return idBooking;
-    }
 
     public Tour() {
     }
 
+    public Tour(int id, String nameTour, String whereStart, String description, String arrival, Date dateStart) {
+        this.id = id;
+        this.nameTour = nameTour;
+        this.whereStart = whereStart;
+        this.description = description;
+        this.arrival = arrival;
+        this.dateStart = dateStart;
+    }
+
     public int getId() {
         return id;
+    }
+
+    public String getNameTour() {
+        return nameTour;
     }
 
     public String getWhereStart() {
@@ -46,8 +48,14 @@ public class Tour implements Serializable{
         return description;
     }
 
+    public String getArrival() {
+        return arrival;
+    }
+
     public Date getDateStart() {
         return dateStart;
     }
+    
+    
     
 }

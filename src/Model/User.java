@@ -16,15 +16,18 @@ public class User implements Serializable{
     private String name ;
     private String position;
     private String phoneNumber;
-    
+    private String account;
+    private String password;
     public User() {
     }
 
-    public User(int id, String name, String position, String phoneNumber) {
+    public User(int id, String name, String position, String phoneNumber, String account, String password) {
         this.id = id;
         this.name = name;
         this.position = position;
         this.phoneNumber = phoneNumber;
+        this.account = account;
+        this.password = password;
     }
 
     public int getId() {
@@ -42,5 +45,15 @@ public class User implements Serializable{
     public String getPhoneNumber() {
         return phoneNumber;
     }
+
+    public String getAccount() {
+        return account;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+   
     
 }

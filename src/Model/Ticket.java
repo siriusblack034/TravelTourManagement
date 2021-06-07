@@ -19,7 +19,7 @@ public class Ticket implements Serializable{
     private String typePayment;
     private String amountPayment;
     private String note;
-    private PenaltyBill penaltyBill;
+    
     private int idUser;
 
     public Ticket() {
@@ -33,10 +33,6 @@ public class Ticket implements Serializable{
         this.amountPayment = amountPayment;
         this.note = note;
         this.idUser = idUser;
-    }
-
-    public void setPenaltyBill(PenaltyBill penaltyBill) {
-        this.penaltyBill = penaltyBill;
     }
 
     public int getId() {
@@ -63,12 +59,14 @@ public class Ticket implements Serializable{
         return note;
     }
 
-    public PenaltyBill getPenaltyBill() {
-        return penaltyBill;
-    }
-
     public int getIdUser() {
         return idUser;
     }
+
+    public void setTotalPrice(float totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+  
     
 }

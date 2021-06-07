@@ -15,14 +15,14 @@ public class Booking implements Serializable{
     private int id;
     private int amountClient ;
     private float pricePerTicket ;
-    private String note;
+    private int idTour;
     private int idClient;
 
-    public Booking(int id, int amountClient, float pricePerTicket, String note, int idClient) {
+    public Booking(int id, int amountClient, float pricePerTicket, int idTour, int idClient) {
         this.id = id;
         this.amountClient = amountClient;
         this.pricePerTicket = pricePerTicket;
-        this.note = note;
+        this.idTour = idTour;
         this.idClient = idClient;
     }
 
@@ -41,12 +41,13 @@ public class Booking implements Serializable{
         return pricePerTicket;
     }
 
-    public String getNote() {
-        return note;
+    public int getIdTour() {
+        return idTour;
     }
 
     public int getIdClient() {
         return idClient;
     }
-    
+
+   
 }
